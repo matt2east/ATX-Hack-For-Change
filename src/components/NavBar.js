@@ -5,6 +5,9 @@ import "../App.css";
 const Navbar = props => {
   return (
     <div id="navbar" className="row">
+      <NavLink to="/" className="navlink">
+        Home
+      </NavLink>
       <NavLink to="/tips" className="navlink">
         Tips
       </NavLink>

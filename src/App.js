@@ -16,13 +16,12 @@ class App extends Component {
           </div>
           <header className="App-header">
             <h1 className="App-title">Clean Air</h1>
-            <h3>Do your share for clean air</h3>
+            <h3>Do your share for clean air?</h3>
           </header>
-          <Home />
           <Switch>
-            <Route exact path="/home" component={Home} />
-            <Route path="/game" component={Game} />
-            <Route path="/tips" component={Tips} />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/game" component={Game} />
+            <Route exact path="/tips" component={Tips} />
           </Switch>
         </div>
       </Router>
