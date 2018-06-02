@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Game from "./components/Game";
 import NavBar from "./components/NavBar";
 import Tips from "./components/Tips";
+import logo from './containers/img/caf.jpg';
 
 class App extends Component {
   render() {
@@ -16,7 +17,8 @@ class App extends Component {
           </div>
           <header className="App-header">
             <h1 className="App-title">Clean Air</h1>
-            <h3>Do your share for clean air?</h3>
+            <h2>Do your share for clean air?</h2>
+            {/* <img src={logo} alt={"logo"}/>  */}
           </header>
           <Switch>
             <Route exact path="/" component={Home} />
