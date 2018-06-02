@@ -19,11 +19,11 @@ class App extends Component {
             <h3>Do your share for clean air</h3>
           </header>
           <Home />
-          {/* <Switch>
+          <Switch>
             <Route exact path="/home" component={Home} />
             <Route path="/game" component={Game} />
             <Route path="/tips" component={Tips} />
-          </Switch> */}
+          </Switch>
         </div>
       </Router>
     );
