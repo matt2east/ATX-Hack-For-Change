@@ -26,12 +26,12 @@ class Api extends React.Component {
   render() {
     return (
       <div><h1>API component</h1>
-      <div>{this.state.weather[0].Category.Name}</div>
-      {/* <ul>{this.state.weather.map(element => {
+      {/* <div>{this.state.weather[0].Category.Name}</div> */}
+      <ul>{this.state.weather.map(element => {
         return (
-          <li key={element}>{element.Category.Name}</li>
+          <li key={element[0]}>{element.Category.Name}</li>
         )
-      })}</ul> */}
+      })}</ul>
       </div>
 
     );
