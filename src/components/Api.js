@@ -17,6 +17,7 @@ class Api extends React.Component {
         this.setState({ weather });
         // console.log(weather)
         console.log("the state is" , this.state)
+        console.log("weather is " , this.state.weather[0].Category.Name)
       })
   }
 
@@ -24,7 +25,14 @@ class Api extends React.Component {
 
   render() {
     return (
-      <div>API component</div>
+      <div><h1>API component</h1>
+      <div>{this.state.weather[0].Category.Name}</div>
+      {/* <ul>{this.state.weather.map(element => {
+        return (
+          <li key={element}>{element.Category.Name}</li>
+        )
+      })}</ul> */}
+      </div>
 
     );
   }
