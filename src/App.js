@@ -16,10 +16,11 @@ class App extends Component {
             <NavBar />
           </div>
           <header className="App-header">
-            <h1 className="App-title">Clean Air</h1>
-            <h2>Do your share for clean air?</h2>
-            {/* <img src={logo} alt={"logo"}/>  */}
+            {/* <h1 className="App-title">Clean Air</h1> */}
+            <img src={logo} alt={"logo"}/> 
+            <h3>Do your share for clean air?</h3> 
           </header>
+          <br/>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/game" component={Game} />
