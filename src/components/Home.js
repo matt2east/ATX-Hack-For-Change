@@ -1,4 +1,5 @@
 import React from "react";
+import Api from "./Api";
 
 class Home extends React.Component {
   componentDidMount() {
@@ -12,6 +13,8 @@ class Home extends React.Component {
     return (
       <div>
         <h1>Home</h1>
+        <Api />
+
       </div>
     );
   }

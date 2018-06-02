@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 // import logo from './logo.svg';
 
 class Game extends Component {
@@ -54,6 +55,7 @@ class Game extends Component {
   render() {
     return (
       <div>
+
         <h1>Play the ozone game.</h1>
       <form>
    
@@ -79,14 +81,14 @@ class Game extends Component {
             disabled = {(this.state.disabled3)? "disabled3" : ""}
             onChange={this.handleSolarPanels}
             />
-            {/* <br/>
+            <br/>
                 Did you launch a nuke?
           <input
             name="gameScore"
             type="checkbox"
             disabled = {(this.state.disabled4)? "disabled4" : ""}
             onChange={this.handleNuke}
-            /> */}
+            />
       </form>
       {this.state.isHidden && <button onClick={this.toggleHidden.bind(this)} >
           Get your score!
@@ -96,10 +98,6 @@ class Game extends Component {
     );
   }
 }
-const Child = () => (
-  <div className='modal'>
-            
-    </div>
-  )
+
 
 export default Game;
