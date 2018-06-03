@@ -1,33 +1,42 @@
 import React from "react";
-import axios from 'axios'
 
 class Home extends React.Component {
   constructor() {
     super();
     this.state = {
-      categoryName: ''
+      error: null,
+      isLoaded: false,
+      data: []
     };
   }
-  async componentDidMount() {
-    try {
-      const response = await axios.get('/api');
-      const { data } = response;
-      this.setState({
-        categoryName: data.Category.Name
-      });
-    } catch (error) {
-      console.error(error);
-    }
+
+  componentDidMount() {
+    fetch('http://www.airnowapi.org/aq/forecast/zipCode/?format=application/json&zipCode=78613&date=2018-06-02&distance=25&API_KEY=A56093ED-9A61-4BAB-B1FE-B47B0190A1FD')
+      .then(res => res.json())
+      .then(result => {
+        this.setState({
+          isLoaded: true,
+          data: result
+        });
+        console.log(this.state.data)
+      },
+        error => {
+          this.setState({
+            isLoaded: true,
+            error
+          });
+        })
   }
 
   render() {
-    const categoryName = this.state.categoryName;
-    return (
-      <div>
-        <h1>Home</h1>
-        <p>{categoryName}</p>
-      </div>
-    );
+    const { error, isLoaded, data } = this.state;
+    if (error) {
+      return <div>Error: {error.message}</div>;
+    } else {
+      return (
+        <div>Data is available</div>
+      )
+    }
   }
 }
 
