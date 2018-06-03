@@ -24,17 +24,31 @@ class Api extends React.Component {
 
 
   render() {
-    return (
-      <div><h1>API component</h1>
-      {/* <div>{this.state.weather[0].Category.Name}</div> */}
-      <ul>{this.state.weather.map(element => {
-        return (
-          <li key={element}>{element.Category.Name}</li>
-        )
-      })}</ul>
-      </div>
+    const oZone = this.state.weather[0];
+    if (oZone){
+      return (
+        <div>
+            <table>
+  <tr>
+    <th>Date</th>
+    <th>Location</th>
+    <th>Air Quality</th>
+    <th>Ozone Action Day</th>
+  </tr>
+  <tr>
+    <td>{oZone.DateIssue}</td>
+    <td>{oZone.ReportingArea}, {oZone.StateCode}</td>
+    <td>{oZone.Category.Name}</td>
+    <td>{oZone.ActionDay.toString()}</td>
+  </tr>
+</table>
+        </div>
+        
+  
+      );
 
-    );
+    }
+    else return null;
   }
 }
 
