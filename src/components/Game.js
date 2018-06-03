@@ -152,7 +152,10 @@ Try a sustainable commute mode at least one day a week to get to work.  During r
         <p><h3>You’re doing great! Here are some other ways you can challenge yourself to do your share for cleaner air!</h3>
    Regularly travel using a sustainable mode of transportation. In Central Texas, automobiles account for nearly 50% of ozone-forming emissions. Ask your employer about incentives, such as subsidized rideshare options, transit passes, or parking cash-out programs!
          If you would like a full list of helpful tips, visit our <a href="http://localhost:3000/#/tips">tips page</a>!</p>}
-        {!this.state.isHidden && this.state.gameScore >= 5 && <p>Awesome!!!</p>}
+        {!this.state.isHidden && this.state.gameScore >= 5 && 
+        <p><h3>AMAZING! You are quite the Ozone Hero! But there are always ways to live cleaner!</h3>
+        It seems like you really committed to routine habits that improve our air quality, while also making some major lifestyle changes in the way you travel and use energy. To continue your contribution to cleaner air you can invest in an energy-efficient or electric vehicle. Buy local and fresh groceries and products. Install solar panels on your home. Most importantly, become an air quality advocate in your community, talk with neighbors and family about actions they can take and strive to be the ultimate Ozone Hero!! 
+        If you would like a full list of helpful tips, visit our <a href="http://localhost:3000/#/tips">tips page</a>!</p>}
 
       </div>
     );
