@@ -40,6 +40,7 @@ class Api extends React.Component {
     <td>{oZone.ReportingArea}, {oZone.StateCode}</td>
     <td>{oZone.Category.Name}</td>
     <td>{oZone.ActionDay.toString()}</td>
+    {/* <td>{oZone.ActionDay == true && "YES"}</td> */}
   </tr>
 </table>
         </div>

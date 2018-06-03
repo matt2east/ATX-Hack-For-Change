@@ -141,9 +141,17 @@ class Game extends Component {
       {this.state.isHidden && <button onClick={this.toggleHidden.bind(this)} >
           Get your score!
         </button>}
-        {!this.state.isHidden && <p>Your score is <b>{this.state.gameScore}</b></p>}
-        {!this.state.isHidden && this.state.gameScore < 3 && <p>You suck!</p>}
-        {!this.state.isHidden && this.state.gameScore >= 3 &&  this.state.gameScore < 5 && <p>Average score. Meh.</p>}
+        {!this.state.isHidden && <h2>Your score is <b>{this.state.gameScore}</b></h2>}
+        {!this.state.isHidden && this.state.gameScore < 3 && 
+        <p><h3>You’re off to a good start! Here are some helpful tips to be more air aware in your daily life!</h3>
+Try a sustainable commute mode at least one day a week to get to work.  During rush hour, removing just 4 percent of cars from roadways can relieve congestion by as much as 30 percent. Small changes in transportation behavior can make a big impact!
+   If you would like a full list of helpful tips, visit our <a href="http://localhost:3000/#/tips">tips page</a>!
+        
+   </p>}
+        {!this.state.isHidden && this.state.gameScore >= 3 &&  this.state.gameScore < 5 && 
+        <p><h3>You’re doing great! Here are some other ways you can challenge yourself to do your share for cleaner air!</h3>
+   Regularly travel using a sustainable mode of transportation. In Central Texas, automobiles account for nearly 50% of ozone-forming emissions. Ask your employer about incentives, such as subsidized rideshare options, transit passes, or parking cash-out programs!
+         If you would like a full list of helpful tips, visit our <a href="http://localhost:3000/#/tips">tips page</a>!</p>}
         {!this.state.isHidden && this.state.gameScore >= 5 && <p>Awesome!!!</p>}
 
       </div>

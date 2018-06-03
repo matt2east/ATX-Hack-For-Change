@@ -14,7 +14,7 @@
 
 #navbar {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   height: 50px;
   align-items: center;
 }
