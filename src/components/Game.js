@@ -100,6 +100,5 @@ class Game extends Component {
     );
   }
 }
-const Child = () => <div className="modal" />;
 
 export default Game;
