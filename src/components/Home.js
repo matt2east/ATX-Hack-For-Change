@@ -1,4 +1,5 @@
 import React from "react";
+import axios from 'axios'
 
 class Home extends React.Component {
   constructor() {
@@ -10,26 +11,37 @@ class Home extends React.Component {
     };
   }
 
-  componentDidMount() {
-    fetch('http://www.airnowapi.org/aq/forecast/zipCode/?format=application/json&zipCode=78613&date=2018-06-02&distance=25&API_KEY=A56093ED-9A61-4BAB-B1FE-B47B0190A1FD')
-      .then(res => res.json())
-      .then(result => {
-        this.setState({
-          isLoaded: true,
-          data: result
-        });
-        console.log(this.state.data)
-      },
-        error => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
-        })
+  async componentDidMount() {
+    try {
+      const response = await axios.get('/data')
+      const { data } = response
+      this.setState({
+        isLoaded: true,
+        data
+      })
+    } catch (error) {
+      console.error(error)
+    }
+
+    // fetch('/data')
+    //   .then(res => res.json())
+    //   .then(result => {
+    //     this.setState({
+    //       isLoaded: true,
+    //       data: result
+    //     });
+    //   },
+    //     error => {
+    //       this.setState({
+    //         isLoaded: true,
+    //         error
+    //       });
+    //     })
   }
 
   render() {
     const { error, isLoaded, data } = this.state;
+    console.log(this.state)
     if (error) {
       return <div>Error: {error.message}</div>;
     } else {
